@@ -62,5 +62,10 @@ func fibonacciTill(_ n:Int) -> [Int] {
     return fibs
 }
 
-var fibs = fibonacciTill(20)
+var fibs = fibonacciTill(8)
 print(fibs)
+
+// function types
+let fibNumbers: (Int) -> [Int] = fibonacciTill
+var fibs1 = fibNumbers(8)
+print(fibs1)
