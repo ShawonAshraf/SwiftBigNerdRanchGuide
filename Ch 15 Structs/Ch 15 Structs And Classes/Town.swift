@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct Town {
+class Town {
     var population = 5_422
     var numberOfStoplights = 4
     
@@ -17,7 +17,7 @@ struct Town {
         print("Population: \(myTown.population), number of stoplights: \(myTown.numberOfStoplights)")
     }
     
-    mutating func increasePopulation(by amount: Int) {
+    func increasePopulation(by amount: Int) {
         population += amount
     }
 }
