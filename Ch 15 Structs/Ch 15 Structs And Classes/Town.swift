@@ -10,11 +10,15 @@ import Foundation
 
 
 class Town {
-    var population = 5_422
+    var population = 5_422 {
+        didSet(oldPopulation) {
+            print("The population has changed to \(population) from \(oldPopulation)")
+        }
+    }
     var numberOfStoplights = 4
     
     func printDescription() {
-        print("Population: \(myTown.population), number of stoplights: \(myTown.numberOfStoplights)")
+        print("Population: \(self.population), number of stoplights: \(self.numberOfStoplights)")
     }
     
     func increasePopulation(by amount: Int) {
