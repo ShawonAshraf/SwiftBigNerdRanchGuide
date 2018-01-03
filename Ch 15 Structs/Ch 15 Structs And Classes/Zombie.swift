@@ -19,4 +19,8 @@ class Zombie: Monster {
     override func makeSpookySound() -> String {
         return "কি বি গমাসসো?"
     }
+    
+    deinit {
+        print("Zombie named \(self.name) is longer terrorizing the town!")
+    }
 }
